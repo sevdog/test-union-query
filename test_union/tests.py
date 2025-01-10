@@ -18,7 +18,8 @@ def query_with_union(data):
                 timestamp__gte=elem['timestamp'],
             )
             .order_by('-timestamp')
-            .values('main', 'timestamp')[:1]
+            #.values('main', 'timestamp')
+            [:1]
         )
 
     if len(data) > 1:
